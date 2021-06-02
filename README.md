@@ -1,4 +1,4 @@
-# Real-Fake-image-classification
+# Real-Fake-image-classification(진행 중)
 '통계적 기계학습' 과목에서 진행한 competition 기록입니다.
 
 ### Overview
