@@ -14,3 +14,11 @@
 - Competition ends at 6/9
 - 코드 재현 이후의 성능을 성적에 반영합니다. 제출된 코드를 제 3자의 google colab에서 실행하여 model training을 거친 후, 최종적으로 얻어진 model instance에서 test set accuracy를 계산, 이를 최종 성능으로 사용합니다.
 - 단, 제출된 코드는 1회만 구동합니다. 또한, 한 세션당 12시간을 넘겨선 안됩니다.
+
+-----
+### 파일 설명: 0601_EffNet4+XcpNet_soft.ipynb
+1) 사용 모델: EfficientNet4, XceptionNet
+2) 사용 optimizer: RAdam
+3) 사용 learning rate scheduler: CosineAnnealingLR 
+4) 10-fold 중 3-fold까지만 실행(CUDA memory 부족 문제 해결을 위해)
+5) 각 fold 별 모델들을 다시 불러와 총 6개의 inference 결과(EfficientNet4에서 3개, XceptionNet에서 3개)로 soft voting 수행 후, 최종 prediction을 함.
